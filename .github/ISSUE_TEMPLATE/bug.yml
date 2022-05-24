@@ -1,0 +1,61 @@
+name: Bug Report
+description: Select this if something is either broken, or is not working as expected
+title: '[bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please join our Discord if you have questions: https://discord.gg/marvobot
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: Which build is this bug report for?
+      options:
+        - bot
+        - frontend
+        - backend
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue description
+      description: |
+        Describe the issue in as much detail as possible. For example, if you are on the webpage, please include the page URL.
+
+        Please include the information about reproducing the bug. You can also attach images or log files.
+      placeholder: |
+        Steps to reproduce:
+        1. Do this
+        2. Take a look at what occurs
+        3. See attached images
+    validations:
+      required: true
+
+  - type: input
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What really should happen.
+      placeholder: The button should redirect you to a support page.
+
+  - type: input
+    id: actual_behavior
+    attributes:
+      label: Actual behavior
+      description: What actually happens, right now.
+      placeholder: The button isn't working at all.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Issue priority
+      description: Select the priority this issue should have. If you are not sure, do not select anything.
+      options:
+        - P0 (completely breaks the system, should be fixed immediately)
+        - P1 (medium priority issues, should be fixed as soon as possible)
+        - P2 (medium to low priority issues, can wait)
+        - P3 (typos, tiny issues)
