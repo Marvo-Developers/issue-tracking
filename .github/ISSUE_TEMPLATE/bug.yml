@@ -41,6 +41,8 @@ body:
       label: Expected behavior
       description: What really should happen.
       placeholder: The button should redirect you to a support page.
+    validations:
+      required: true
 
   - type: input
     id: actual_behavior
@@ -48,6 +50,8 @@ body:
       label: Actual behavior
       description: What actually happens, right now.
       placeholder: The button isn't working at all.
+    validations:
+      required: true
 
   - type: dropdown
     id: priority
